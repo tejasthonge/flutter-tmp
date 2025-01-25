@@ -89,7 +89,7 @@ class AppRouter {
       GoRoute(
         name: AppPages.demo.name,
         path: AppPages.demo.path,
-        builder: (context, state) => const DemoPage(),
+        builder: (context, state) => const MyScreen(),
       ),
       ShellRoute(
         navigatorKey: _shellNavigatorKey,

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:kequele/app/base/view/screens/basic_page.dart';
 import '../../../../shared/routes/index.dart';
 import '../../bloc/dashboard_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-class Dashboard extends StatefulWidget {
+class Dashboard extends BasePage {
   final Widget child;
 
   const Dashboard({super.key, required this.child});
@@ -13,7 +14,7 @@ class Dashboard extends StatefulWidget {
   State<Dashboard> createState() => _DashboardState();
 }
 
-class _DashboardState extends State<Dashboard> {
+class _DashboardState extends BaseState<Dashboard> with BasicPage<Dashboard> {
   @override
   void initState() {
     super.initState();
@@ -21,32 +22,35 @@ class _DashboardState extends State<Dashboard> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  String screenName() {
+    // TODO: implement screenName
+    throw UnimplementedError();
+  }
+
+  @override
+  Widget body(BuildContext context) {
     return BlocConsumer<DashboardBloc, DashboardState>(
       listener: (context, state) {},
       builder: (context, state) {
         if (state is DashboardLoadingState) {
-          return const Scaffold(
-            body: Center(
-              child: CircularProgressIndicator(),
-            ),
+          return Center(
+            child: CircularProgressIndicator(),
           );
         } else if (state is DashboardErrorState) {
-          return Scaffold(
-            body: Center(
-              child: Text(state.errorMessage),
-            ),
+          return Center(
+            child: Text(state.errorMessage),
           );
         } else if (state is DashboardSuccessState) {
-          
           return WillPopScope(
             onWillPop: () async {
               if (state.selectedTab == BottomNavTab.Home) {
-                return true; 
+                return true;
               } else {
-                context.read<DashboardBloc>().add(DashboardUpdateTabEvent(BottomNavTab.Home));
+                context
+                    .read<DashboardBloc>()
+                    .add(DashboardUpdateTabEvent(BottomNavTab.Home));
                 _navigateToTab(context, BottomNavTab.Home);
-                return false; 
+                return false;
               }
             },
             child: _buildSuccess(context, state),
@@ -63,44 +67,53 @@ class _DashboardState extends State<Dashboard> {
   }
 
   Widget _buildSuccess(BuildContext context, DashboardSuccessState state) {
-    return Scaffold(
-      appBar: AppBar(title: Text(state.selectedTab.name)),
-      body: widget.child,
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: BottomNavTab.values.indexOf(state.selectedTab),
-        onTap: (index) {
-          final tab = BottomNavTab.values[index];
-          context.read<DashboardBloc>().add(DashboardUpdateTabEvent(tab));
-          _navigateToTab(context, tab);
-        },
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.devices),
-            label: 'Devices',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-      ),
-    );
+    return widget.child;
+  }
+
+  @override
+  Widget bottomNavigationBar(BuildContext context) {
+    return BlocConsumer<DashboardBloc, DashboardState>(
+        listener: (context, state) {},
+        builder: (context, state) {
+          if (state is DashboardSuccessState) {
+            return BottomNavigationBar(
+              currentIndex: BottomNavTab.values.indexOf(state.selectedTab),
+              onTap: (index) {
+                final tab = BottomNavTab.values[index];
+                context.read<DashboardBloc>().add(DashboardUpdateTabEvent(tab));
+                _navigateToTab(context, tab);
+              },
+              items: const [
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.home),
+                  label: 'Home',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.devices),
+                  label: 'Devices',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.person),
+                  label: 'Profile',
+                ),
+              ],
+            );
+          } else {
+            return super.bottomNavigationBar(context);
+          }
+        });
   }
 
   void _navigateToTab(BuildContext context, BottomNavTab tab) {
     switch (tab) {
       case BottomNavTab.Home:
-        context.go(AppPages.home.path); 
+        context.go(AppPages.home.path);
         break;
       case BottomNavTab.Devices:
-        context.go(AppPages.devices.path); 
+        context.go(AppPages.devices.path);
         break;
       case BottomNavTab.Profile:
-        context.go(AppPages.profile.path); 
+        context.go(AppPages.profile.path);
         break;
     }
   }
