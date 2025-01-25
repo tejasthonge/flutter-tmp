@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "1077236987832",
+    "project_id": "kequel-app",
+    "storage_bucket": "kequel-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077236987832:android:287ed1f8f25a080937814d",
+        "android_client_info": {
+          "package_name": "com.quoppo.kequel.kequele"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077236987832-952tcsd7lqkq49vnj4j2kdto7642dd59.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.quoppo.kequel.kequele",
+            "certificate_hash": "a59f7039a9c897ac03633dc7d8da91b5f3b4063f"
+          }
+        },
+        {
+          "client_id": "1077236987832-52g70lgse0srbv32oeh6dlfa1opcrq7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD13MaIoTbreNkouVCB7QBlGlbD4jU_6B0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077236987832-52g70lgse0srbv32oeh6dlfa1opcrq7q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1077236987832-ion1qkqkdsaul0qveuubhe8d59he0ibf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.quoppo.kequel.kequele"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077236987832:android:449cb43f998c73b637814d",
+        "android_client_info": {
+          "package_name": "com.quoppo.kequele"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077236987832-52g70lgse0srbv32oeh6dlfa1opcrq7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD13MaIoTbreNkouVCB7QBlGlbD4jU_6B0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077236987832-52g70lgse0srbv32oeh6dlfa1opcrq7q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1077236987832-ion1qkqkdsaul0qveuubhe8d59he0ibf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.quoppo.kequel.kequele"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,36 @@
+<variant
+    name="release"
+    package="com.quoppo.kequele"
+    minSdkVersion="23"
+    targetSdkVersion="35"
+    shrinking="true"
+    mergedManifest="/Users/tejasthonge/coding/Compny/Quoppo/kequel-app/build/app/intermediates/merged_manifest/release/AndroidManifest.xml"
+    proguardFiles="/Users/tejasthonge/coding/Compny/Quoppo/kequel-app/build/app/intermediates/default_proguard_files/global/proguard-android-optimize.txt-8.1.0:/Users/tejasthonge/fvm/versions/3.27.1/packages/flutter_tools/gradle/flutter_proguard_rules.pro:proguard-rules.pro"
+    partialResultsDir="/Users/tejasthonge/coding/Compny/Quoppo/kequel-app/build/app/intermediates/lint_vital_partial_results/release/out"
+    desugaredMethodsFiles="/Users/tejasthonge/.gradle/caches/transforms-3/da32f467e66aa6a07c35a8c3dfbec289/transformed/D8BackportedDesugaredMethods.txt">
+  <buildFeatures
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+    <sourceProvider
+        manifests="src/main/AndroidManifest.xml"
+        javaDirectories="src/main/java:src/release/java:src/main/kotlin:src/release/kotlin"
+        resDirectories="src/main/res:src/release/res"
+        assetsDirectories="src/main/assets:src/release/assets"/>
+  </sourceProviders>
+  <testSourceProviders>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <manifestPlaceholders>
+    <placeholder
+        name="applicationName"
+        value="android.app.Application" />
+  </manifestPlaceholders>
+  <mainArtifact
+      classOutputs="/Users/tejasthonge/coding/Compny/Quoppo/kequel-app/build/app/intermediates/javac/release/classes:/Users/tejasthonge/coding/Compny/Quoppo/kequel-app/build/app/tmp/kotlin-classes/release:/Users/tejasthonge/coding/Compny/Quoppo/kequel-app/build/app/kotlinToolingMetadata:/Users/tejasthonge/coding/Compny/Quoppo/kequel-app/build/app/intermediates/compile_and_runtime_not_namespaced_r_class_jar/release/R.jar"
+      applicationId="com.quoppo.kequele"
+      generatedSourceFolders="/Users/tejasthonge/coding/Compny/Quoppo/kequel-app/build/app/generated/ap_generated_sources/release/out"
+      generatedResourceFolders="/Users/tejasthonge/coding/Compny/Quoppo/kequel-app/build/app/generated/res/google-services/release:/Users/tejasthonge/coding/Compny/Quoppo/kequel-app/build/app/generated/res/resValues/release"
+      desugaredMethodsFiles="/Users/tejasthonge/.gradle/caches/transforms-3/da32f467e66aa6a07c35a8c3dfbec289/transformed/D8BackportedDesugaredMethods.txt">
+  </mainArtifact>
+</variant>
