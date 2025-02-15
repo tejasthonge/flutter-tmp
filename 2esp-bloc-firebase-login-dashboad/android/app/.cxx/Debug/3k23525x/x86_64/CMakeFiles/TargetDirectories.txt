@@ -1,0 +1,2 @@
+/Users/tejasthonge/coding/Compny/Quoppo/quirlo-app/android/app/.cxx/Debug/3k23525x/x86_64/CMakeFiles/edit_cache.dir
+/Users/tejasthonge/coding/Compny/Quoppo/quirlo-app/android/app/.cxx/Debug/3k23525x/x86_64/CMakeFiles/rebuild_cache.dir

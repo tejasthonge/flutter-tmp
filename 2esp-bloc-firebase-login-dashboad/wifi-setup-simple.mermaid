@@ -1,0 +1,13 @@
+flowchart TD
+    Start[ESP32 Powers On] --> Check{Check for stored WiFi credentials}
+    
+    Check -->|No credentials found| AP[Create Access Point ESP32_Setup_XXXX]
+    Check -->|Credentials exist| Connect[Connect to saved WiFi network]
+    
+    AP --> Wait[Wait for mobile app connection]
+    Wait --> Receive[Receive new WiFi credentials from app]
+    Receive --> Store[Store credentials in memory]
+    Store --> Switch[Switch to normal WiFi mode]
+    Switch --> Connect
+    
+    Connect --> Online[ESP32 is online and ready]

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "296816425167",
+    "project_id": "quirlo-4880d",
+    "storage_bucket": "quirlo-4880d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296816425167:android:ca00d8bf670268e7cd5fba",
+        "android_client_info": {
+          "package_name": "com.quoppo.quirlo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296816425167-vp74vk00gg6m13bqvlbs8v70jkdedhu5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVCSVySb5QRGVssDv1uUgOCPRxa5gjyE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296816425167-vp74vk00gg6m13bqvlbs8v70jkdedhu5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "296816425167-nko4u73f62c9lnrsu60dh1pk0h5gfh4h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.quoppo.quirlo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
